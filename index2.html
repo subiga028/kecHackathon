@@ -1,0 +1,27 @@
+<html>
+  <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+  <body>
+    Progress: <span id="progress">0</span>
+    <div class="container">
+      <input
+        id="url"
+        value="https://tesseract.projectnaptha.com/img/eng_bw.png"
+      />
+      <button onclick="onCovert()">Convert URL Image</button>
+    </div>
+    <div class="container">
+      <img id="output" src="" width="100" height="100" />
+      <input
+        name="photo"
+        type="file"
+        accept="image/*"
+        onchange="onImageChange(this.files[0])"
+      />
+    </div>
+    <div class="container">
+      <p id="text"></p>
+      <button onclick="read()">Read</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
